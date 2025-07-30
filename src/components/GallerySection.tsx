@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -50,6 +50,13 @@ const GallerySection = () => {
       prevIndex === 0 ? galleryItems.length - 3 : prevIndex - 1
     );
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
     <section className="py-20 bg-white">
