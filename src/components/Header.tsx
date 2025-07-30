@@ -23,7 +23,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-3">
           <div className="flex items-center space-x-3">
             <img 
-  src="/images/nkss.jpg" 
+  src="/images/nkss.png" 
   alt="IEEE Logo" 
   className="h-10 w-auto"
 />
