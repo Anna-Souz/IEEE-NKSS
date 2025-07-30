@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="https://www.ieee.org/content/dam/ieee-org/ieee/web/org/ieee-logo.png" 
+                src="/images/nkss.png"
                 alt="IEEE Logo" 
                 className="h-8 w-auto filter brightness-0 invert"
               />
@@ -38,7 +38,23 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <ul className="space-y-3 text-gray-400 text-sm">
+              <li className="flex items-start">
+                <MapPin size={16} className="mr-3 mt-1 text-blue-400 flex-shrink-0" />
+                <span>Basaveshwar Engineering College, Bagalkot, Karnataka, India</span>
+              </li>
+              <li className="flex items-center">
+                <Mail size={16} className="mr-3 text-blue-400 flex-shrink-0" />
+                <a href="mailto:info@ieeenkss.org" className="hover:text-white transition-colors">info@ieeenkss.org</a>
+              </li>
+              <li className="flex items-center">
+                <Phone size={16} className="mr-3 text-blue-400 flex-shrink-0" />
+                <a href="tel:+911234567890" className="hover:text-white transition-colors">+91 123 456 7890</a>
+              </li>
+            </ul>
+          </div>
           {/* Social Media */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect With Us</h4>

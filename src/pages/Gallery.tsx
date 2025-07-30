@@ -4,17 +4,22 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Search, Filter, Camera, Sparkles } from "lucide-react";
+import PhotoModal from "@/components/PhotoModal";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentImageIndexes, setCurrentImageIndexes] = useState<{ [key: number]: number }>({});
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState<string[]>([]);
+  const [modalInitialIndex, setModalInitialIndex] = useState(0);
 
   const categories = ["all", "agm", "nkcon", "events", "workshops", "conferences", "awards", "networking"];
   
   const galleryItems = [
     {
       id: 1,
-      image: "/images/agm1.jpg",
+      images: ["/images/agm1.jpg", "/images/agm2.jpg", "/images/agm3.jpg", "/images/agm4.jpg", "/images/agm5.jpg", "/images/agm6.jpg", "/images/agm7.jpg", "/images/agm8.jpg"],
       title: "Glimpse of AGM-2025",
       category: "agm",
       date: "2025",
@@ -23,7 +28,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      image: "/images/nkcon1.jpg",
+      images: ["/images/nkcon1.jpg", "/images/nkcon1.1.jpg", "/images/nkcon1.2.jpg", "/images/nkcon1.3.jpg", "/images/nkcon1.4.jpg", "/images/nkcon1.5.jpg", "/images/nkcon1.6.jpg", "/images/nkcon1.7.jpg"],
       title: "Glimpse of NKCon-2023@BEC",
       category: "nkcon",
       date: "2023",
@@ -32,7 +37,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      image: "/images/nkcon1.2.jpg",
+      images: ["/images/nkcon2.jpg", "/images/nkcon3.jpg", "/images/nkcon4.jpg", "/images/nkcon5.jpg", "/images/nkcon6.jpg", "/images/nkcon7.jpg", "/images/nkcon8.jpg"],
       title: "Glimpse of NKCON-2024@Belagavi",
       category: "nkcon",
       date: "2024",
@@ -41,7 +46,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      image: "/images/event.jpg",
+      images: ["/images/event.jpg", "/images/event1.jpg", "/images/event2.jpg", "/images/event3.jpg", "/images/event4.jpg", "/images/event5.jpg"],
       title: "Glimpse of NKCon-2022@Vijaypur",
       category: "nkcon",
       date: "2022",
@@ -50,7 +55,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      image: "/images/nkcon8.jpg",
+      images: ["/images/nkcon8.jpg", "/images/event.jpg", "/images/event1.jpg", "/images/event2.jpg"],
       title: "Technical Seminar",
       category: "events",
       date: "June 2023",
@@ -58,7 +63,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      image: "/images/nkcon6.jpg",
+      images: ["/images/nkcon6.jpg", "/images/event3.jpg", "/images/event4.jpg", "/images/event5.jpg"],
       title: "Student Hackathon",
       category: "events",
       date: "May 2023",
@@ -66,7 +71,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      image: "/images/event2.jpg",
+      images: ["/images/event2.jpg", "/images/nkcon1.jpg", "/images/nkcon2.jpg", "/images/nkcon3.jpg"],
       title: "Industry Networking Event",
       category: "networking",
       date: "April 2023",
@@ -74,7 +79,7 @@ const Gallery = () => {
     },
     {
       id: 8,
-      image: "/images/event4.jpg",
+      images: ["/images/event4.jpg", "/images/nkcon4.jpg", "/images/nkcon5.jpg", "/images/nkcon6.jpg"],
       title: "Women in Engineering Workshop",
       category: "workshops",
       date: "March 2023",
@@ -129,10 +134,22 @@ const Gallery = () => {
                 key={item.id}
                 className="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 bg-white/80 backdrop-blur-sm border border-white/50 animate-fade-in"
                 style={{animationDelay: `${index * 0.1}s`}}
+                onMouseEnter={() => {
+                  const interval = setInterval(() => {
+                    setCurrentImageIndexes(prev => ({
+                      ...prev,
+                      [item.id]: (prev[item.id] || 0) + 1 >= item.images.length ? 0 : (prev[item.id] || 0) + 1
+                    }));
+                  }, 2000);
+                  (window as any)[`interval_${item.id}`] = interval;
+                }}
+                onMouseLeave={() => {
+                  clearInterval((window as any)[`interval_${item.id}`]);
+                }}
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={item.image}
+                    src={item.images[currentImageIndexes[item.id] || 0]}
                     alt={item.title}
                     className="w-full h-64 object-cover group-hover:scale-110 transition-all duration-500"
                   />
@@ -177,9 +194,18 @@ const Gallery = () => {
                     <span className="text-blue-600 text-sm font-medium bg-blue-50 px-2 py-1 rounded-full">
                       {item.date}
                     </span>
-                    <button className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors duration-300 flex items-center gap-1 group/btn">
-                      View Details 
-                      <span className="transform group-hover/btn:translate-x-1 transition-transform duration-300">→</span>
+                    <button
+                      className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors duration-300 flex items-center gap-1 group/btn"
+                      onClick={() => {
+                        setModalImages(item.images);
+                        setModalInitialIndex(0);
+                        setIsModalOpen(true);
+                      }}
+                    >
+                      View Photos
+                      <span className="transform group-hover/btn:translate-x-1 transition-transform duration-300">
+                        →
+                      </span>
                     </button>
                   </div>
                 </div>
@@ -221,6 +247,13 @@ const Gallery = () => {
           </Button>
         </div>
       </section>
+      {isModalOpen && (
+        <PhotoModal
+          images={modalImages}
+          initialIndex={modalInitialIndex}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
       <Footer />
     </div>
   );
