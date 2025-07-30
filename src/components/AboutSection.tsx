@@ -60,7 +60,7 @@ const AboutSection = () => {
             {/* Logo */}
             <div className="flex-shrink-0">
               <img
-                src="/images/nkss.jpg"
+                src="/images/nkss.png"
                 alt="IEEE NKSS Logo"
                 className="w-48 h-auto object-contain"
               />

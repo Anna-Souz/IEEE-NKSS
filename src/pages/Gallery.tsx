@@ -19,7 +19,7 @@ const Gallery = () => {
   const galleryItems = [
     {
       id: 1,
-      images: ["/images/agm1.jpg", "/images/agm2.jpg", "/images/agm3.jpg", "/images/agm4.jpg", "/images/agm5.jpg", "/images/agm6.jpg", "/images/agm7.jpg", "/images/agm8.jpg"],
+      images: ["/images/agm1.jpg", "/images/agm2.jpg", "/images/agm3.jpg", "/images/agm4.jpg", "/images/agm8.jpg"],
       title: "Glimpse of AGM-2025",
       category: "agm",
       date: "2025",
@@ -28,64 +28,31 @@ const Gallery = () => {
     },
     {
       id: 2,
-      images: ["/images/nkcon1.jpg", "/images/nkcon1.1.jpg", "/images/nkcon1.2.jpg", "/images/nkcon1.3.jpg", "/images/nkcon1.4.jpg", "/images/nkcon1.5.jpg", "/images/nkcon1.6.jpg", "/images/nkcon1.7.jpg"],
-      title: "Glimpse of NKCon-2023@BEC",
+      images: ["/images/nkcon2.jpg", "/images/nkcon3.jpg", "/images/event4.jpg", "/images/nkcon4.jpg", "/images/nkcon5.jpg", "/images/nkcon6.jpg", "/images/nkcon7.jpg", "/images/nkcon8.jpg"],
+      title: "Glimpse of NKCon-2024 Held in Bagalkot",
       category: "nkcon",
-      date: "2023",
-      description: "North Karnataka Conference 2023 at Basaveshwar Engineering College",
+      date: "2024",
+      description: "North Karnataka Conference 2024 in Basaveshwar Engineering College",
       imageCode: "DSC_0018"
     },
     {
       id: 3,
-      images: ["/images/nkcon2.jpg", "/images/nkcon3.jpg", "/images/nkcon4.jpg", "/images/nkcon5.jpg", "/images/nkcon6.jpg", "/images/nkcon7.jpg", "/images/nkcon8.jpg"],
-      title: "Glimpse of NKCON-2024@Belagavi",
+      images: ["/images/nkcon1.4.jpg", "/images/nkcon1.5.jpg", "/images/belgaum_nkcon1.jpeg"],
+      title: "Glimpse of NKCON-2023 Held in Belagavi",
       category: "nkcon",
-      date: "2024",
-      description: "North Karnataka Conference 2024 at Belagavi with industry experts",
-      imageCode: "NKCON_2024"
+      date: "2023",
+      description: "North Karnataka Conference 2023 in KLE MSSCET with industry experts",
+      imageCode: "NKCON_2023"
     },
     {
       id: 4,
-      images: ["/images/event.jpg", "/images/event1.jpg", "/images/event2.jpg", "/images/event3.jpg", "/images/event4.jpg", "/images/event5.jpg"],
-      title: "Glimpse of NKCon-2022@Vijaypur",
+      images: ["/images/nkcon1.6.jpg", "/images/nkcon1.7.jpg", "/images/event2.jpg"],
+      title: "Glimpse of NKCon-2022 Held in Vijayapura",
       category: "nkcon",
       date: "2022",
-      description: "North Karnataka Conference 2022 at Vijaypur",
+      description: "North Karnataka Conference 2022 in BLDEACET",
       imageCode: "NKCON 2022"
     },
-    {
-      id: 5,
-      images: ["/images/nkcon8.jpg", "/images/event.jpg", "/images/event1.jpg", "/images/event2.jpg"],
-      title: "Technical Seminar",
-      category: "events",
-      date: "June 2023",
-      description: "Technical seminar on emerging technologies"
-    },
-    {
-      id: 6,
-      images: ["/images/nkcon6.jpg", "/images/event3.jpg", "/images/event4.jpg", "/images/event5.jpg"],
-      title: "Student Hackathon",
-      category: "events",
-      date: "May 2023",
-      description: "48-hour hackathon with innovative project solutions"
-    },
-    {
-      id: 7,
-      images: ["/images/event2.jpg", "/images/nkcon1.jpg", "/images/nkcon2.jpg", "/images/nkcon3.jpg"],
-      title: "Industry Networking Event",
-      category: "networking",
-      date: "April 2023",
-      description: "Networking session with industry professionals and alumni"
-    },
-    {
-      id: 8,
-      images: ["/images/event4.jpg", "/images/nkcon4.jpg", "/images/nkcon5.jpg", "/images/nkcon6.jpg"],
-      title: "Women in Engineering Workshop",
-      category: "workshops",
-      date: "March 2023",
-      description: "Special workshop promoting women's participation in engineering"
-    },
-   
   ];
 
   const filteredItems = galleryItems.filter(item => {

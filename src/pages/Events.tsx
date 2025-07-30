@@ -125,24 +125,24 @@ const EventsSection = () => {
             {[
               {
                 title: "NKCON 2022",
-                location: "Vijayapur",
+                location: "Vijayapura",
                 type: "Conference",
                 color: "from-blue-100 to-purple-100",
-                image: "/images/nkcon1.jpg",
-              },
-              {
-                title: "NKCON 2024",
-                location: "Belagavi",
-                type: "Conference",
-                color: "from-green-100 to-blue-100",
-                image: "/images/agm7.jpg",
+                image: "/images/nkcon1.7.jpg",
               },
               {
                 title: "NKCON 2023",
+                location: "Belagavi",
+                type: "Conference",
+                color: "from-green-100 to-blue-100",
+                image: "/images/nkcon1.5.jpg",
+              },
+              {
+                title: "NKCON 2024",
                 location: "Bagalkot",
                 type: "Conference",
                 color: "from-purple-100 to-pink-100",
-                image: "/images/nkcon8.jpg",
+                image: "/images/nkcon2.jpg",
               },
               {
                 title: "AGM 2025",
