@@ -279,32 +279,32 @@ const ResourcesSection = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <Header />
-      <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/50 to-purple-50/30">
-        
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-blue-600/5"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-float"></div>
-        <div
-          className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl animate-float"
-          style={{ animationDelay: "2s" }}
-        ></div>
+<section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-50 via-blue-100/70 to-blue-200/50">
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-100/10 via-blue-200/10 to-blue-100/10"></div>
+  <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300/10 rounded-full blur-3xl animate-float"></div>
+  <div
+    className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-float"
+    style={{ animationDelay: "2s" }}
+  ></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-blue-200/50 animate-fade-in">
-              <BookOpen className="w-4 h-4 mr-2" />
-              Resources • IEEE North Karnataka
-            </Badge>
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-4xl mx-auto">
+      <Badge className="mb-6 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 border-blue-200/50 animate-fade-in">
+        <BookOpen className="w-4 h-4 mr-2" />
+        Resources • IEEE North Karnataka
+      </Badge>
 
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-8 animate-fade-in-1">
-              Resources
-            </h1>
+      <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-8 animate-fade-in-1">
+        Resources
+      </h1>
 
-            <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed animate-fade-in-2">
-              Access valuable IEEE resources, standards, publications, and professional development materials
-            </p>
-          </div>
-        </div>
-      </section>
+      <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed animate-fade-in-2">
+        Access valuable IEEE resources, standards, publications, and professional development materials
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Main Resources Section */}
       <section className="py-20 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/20">

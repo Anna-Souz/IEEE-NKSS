@@ -509,91 +509,102 @@ const Executive = () => {
       
 
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-blue-600/5"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-gradient-to-r from-blue-50 to-purple-50 text-blue-700 border-blue-200/50 animate-fade-in">
-              <Sparkles className="w-4 h-4 mr-2" />
-              Leadership Excellence • Region 10
-            </Badge>
-            
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-8 animate-fade-in-1">
-              Executive Committee
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed animate-fade-in-2">
-              Meet the distinguished leaders driving IEEE North Karnataka Section's mission 
-              of advancing technology for humanity across the region
-            </p>
-          </div>
-        </div>
-      </section>
+<section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-blue-50 via-blue-100/70 to-blue-200/50">
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-100/10 via-blue-200/10 to-blue-100/10"></div>
+  <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300/10 rounded-full blur-3xl animate-float"></div>
+  <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-4xl mx-auto">
+      <Badge className="mb-6 bg-gradient-to-r from-blue-50 to-blue-100 text-blue-700 border-blue-200/50 animate-fade-in">
+        <Sparkles className="w-4 h-4 mr-2" />
+        Leadership Excellence • Region 10
+      </Badge>
+      
+      <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-slate-800 via-blue-700 to-purple-700 bg-clip-text text-transparent mb-8 animate-fade-in-1">
+        Executive Committee
+      </h1>
+      
+      <p className="text-xl md:text-2xl text-slate-600 mb-12 leading-relaxed animate-fade-in-2">
+        Meet the distinguished leaders driving IEEE North Karnataka Section's mission 
+        of advancing technology for humanity across the region
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Main Content with Tabs */}
        <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Tabs defaultValue="current" className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-12 bg-white/70 backdrop-blur-sm p-2 rounded-2xl shadow-lg">
-              <TabsTrigger
-  value="current"
-  className="rounded-lg font-semibold transition-all duration-300 
-    data-[state=active]:bg-gradient-to-r 
-    data-[state=active]:from-blue-200 data-[state=active]:to-purple-200 
-    data-[state=active]:text-blue-900 
-    data-[state=active]:shadow-md"
->
-  EXECOM 2025
-</TabsTrigger>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Tabs defaultValue="current" className="w-full">
+      
+        
+<TabsList className="grid w-full grid-cols-5 mb-12 bg-white/70 backdrop-blur-sm p-2 rounded-xl shadow-lg items-center overflow-hidden">
+  <TabsTrigger
+    value="current"
+    className="px-4 py-2 rounded-lg font-semibold transition-all duration-300
+      hover:bg-gray-100
+      data-[state=active]:bg-gradient-to-r
+      data-[state=active]:from-blue-200 data-[state=active]:to-purple-200
+      data-[state=active]:text-blue-900
+      data-[state=active]:shadow-sm
+      data-[state=active]:rounded-lg overflow-hidden"
+  >
+    EXECOM 2025
+  </TabsTrigger>
 
-<TabsTrigger
-  value="student-branches"
-  className="px-4 py-2.5 rounded-lg font-semibold transition-all duration-300 
-    data-[state=active]:bg-gradient-to-r 
-    data-[state=active]:from-blue-200 data-[state=active]:to-purple-200 
-    data-[state=active]:text-blue-900 
-    data-[state=active]:shadow-md"
->
-  Student Branches
-</TabsTrigger>
+  <TabsTrigger
+    value="student-branches"
+    className="px-4 py-2 rounded-lg font-semibold transition-all duration-300
+      hover:bg-gray-100
+      data-[state=active]:bg-gradient-to-r
+      data-[state=active]:from-blue-200 data-[state=active]:to-purple-200
+      data-[state=active]:text-blue-900
+      data-[state=active]:shadow-sm
+      data-[state=active]:rounded-lg overflow-hidden"
+  >
+    Student Branches
+  </TabsTrigger>
 
-<TabsTrigger
-  value="conferences"
-  className="px-4 py-2.5 rounded-lg font-semibold transition-all duration-300 
-    data-[state=active]:bg-gradient-to-r 
-    data-[state=active]:from-blue-200 data-[state=active]:to-purple-200 
-    data-[state=active]:text-blue-900 
-    data-[state=active]:shadow-md"
->
-  Conferences
-</TabsTrigger>
+  <TabsTrigger
+    value="conferences"
+    className="px-4 py-2 rounded-lg font-semibold transition-all duration-300
+      hover:bg-gray-100
+      data-[state=active]:bg-gradient-to-r
+      data-[state=active]:from-blue-200 data-[state=active]:to-purple-200
+      data-[state=active]:text-blue-900
+      data-[state=active]:shadow-sm
+      data-[state=active]:rounded-lg overflow-hidden"
+  >
+    Conferences
+  </TabsTrigger>
 
-<TabsTrigger
-  value="past-2024"
-  className="px-4 py-2.5 rounded-lg font-semibold transition-all duration-300 
-    data-[state=active]:bg-gradient-to-r 
-    data-[state=active]:from-blue-200 data-[state=active]:to-purple-200 
-    data-[state=active]:text-blue-900 
-    data-[state=active]:shadow-md"
->
-  Past 2024
-</TabsTrigger>
+  <TabsTrigger
+    value="past-2024"
+    className="px-4 py-2 rounded-lg font-semibold transition-all duration-300
+      hover:bg-gray-100
+      data-[state=active]:bg-gradient-to-r
+      data-[state=active]:from-blue-200 data-[state=active]:to-purple-200
+      data-[state=active]:text-blue-900
+      data-[state=active]:shadow-sm
+      data-[state=active]:rounded-lg overflow-hidden"
+  >
+    Past 2024
+  </TabsTrigger>
 
-<TabsTrigger
-  value="past-2023"
-  className="px-4 py-2.5 rounded-lg font-semibold transition-all duration-300 
-    data-[state=active]:bg-gradient-to-r 
-    data-[state=active]:from-blue-200 data-[state=active]:to-purple-200 
-    data-[state=active]:text-blue-900 
-    data-[state=active]:shadow-md"
->
-  Past 2023
-</TabsTrigger>
-
-            </TabsList>
+  <TabsTrigger
+    value="past-2023"
+    className="px-4 py-2 rounded-lg font-semibold transition-all duration-300
+      hover:bg-gray-100
+      data-[state=active]:bg-gradient-to-r
+      data-[state=active]:from-blue-200 data-[state=active]:to-purple-200
+      data-[state=active]:text-blue-900
+      data-[state=active]:shadow-sm
+      data-[state=active]:rounded-lg overflow-hidden"
+  >
+    Past 2023
+  </TabsTrigger>
+</TabsList>
 
             <TabsContent value="current" >
               {/* Executive Committee Table */}
